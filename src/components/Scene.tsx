@@ -8,9 +8,8 @@ const Scene = () => {
       <GuiProvider>
         <Canvas
           camera={{ position: [4, 2, 5], fov: 75 }}
-        //   style={{ width: '100vw', height: '100vh' }}
         >
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={0.75} />
           <directionalLight intensity={1.5} position={[3, 2, -8]} />
           
           <HauntedHouse />
