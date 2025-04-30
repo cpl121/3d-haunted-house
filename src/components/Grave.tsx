@@ -16,6 +16,12 @@ const Grave = ({ position = [0, 0, 0], scale = [1, 1, 1], rotation = [0, 0, 0]  
   });
 
   map.colorSpace = THREE.SRGBColorSpace
+
+  
+  map.repeat.set(0.3,0.4)
+  normalMap.repeat.set(0.3,0.4)
+  aoMap.repeat.set(0.3,0.4)
+  roughnessMap.repeat.set(0.3,0.4)
   
   return (
       <mesh position={position} scale={scale} rotation={rotation}>
