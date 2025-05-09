@@ -1,0 +1,8 @@
+export { default as HauntedHouse } from './HauntedHouse';
+export { default as Scene } from './Scene';
+export { default as Grave } from './Grave';
+export { default as Floor } from './Floor';
+export { default as Bush } from './Bush';
+export { default as Wall } from './Wall';
+export { default as Door } from './Door';
+export { default as Roof } from './Roof';
