@@ -1,5 +1,5 @@
 import { useTexture } from "@react-three/drei";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import * as THREE from 'three'
 
 const Door = () => {
@@ -10,40 +10,33 @@ const Door = () => {
     aoMap,
     roughnessMap,
     normalMap,
-    metalnessMap
+    metalnessMap,
+    displacementMap,
   } = useTexture({
-    map: './assets/door/large_castle_door_1k/large_castle_door_diff_1k.jpg',
-    aoMap: './assets/door/large_castle_door_1k/large_castle_door_ao_1k.jpg',
-    normalMap: './assets/door/large_castle_door_1k/large_castle_door_nor_gl_1k.jpg',
-    roughnessMap: './assets/door/large_castle_door_1k/large_castle_door_rough_1k.jpg',
-    metalnessMap: './assets/door/large_castle_door_1k/large_castle_door_metal_1k.jpg'
+    map: './assets/door/wooden_garage_door_1k/wooden_garage_door_diff_1k.jpg',
+    normalMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_nor_gl_1k.jpg',
+    aoMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.jpg',
+    metalnessMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.jpg',
+    roughnessMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.jpg',
+    displacementMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_disp_1k.jpg',
   });
 
   map.colorSpace = THREE.SRGBColorSpace
-
-  // map.repeat.set(3,1)
-  // normalMap.repeat.set(3,1)
-  // aoMap.repeat.set(3,1)
-  // roughnessMap.repeat.set(3,1)
-
-  useEffect(() => {
-    if (meshRef.current) {
-      const geometry = meshRef.current.geometry;
-      geometry.setAttribute('uv2', geometry.attributes.uv);
-    }
-  }, []);
 
   return (
     <mesh position={[0, 1, 2 + 0.01]} ref={meshRef}>
       <planeGeometry args={[2.2, 2.2, 100, 100]} />
       <meshStandardMaterial 
-          normalScale={[1.5, 1.5]}
+          normalScale={[2, 2]}
           map={map}
           aoMap={aoMap}
           roughnessMap={roughnessMap}
           normalMap={normalMap}
           metalnessMap={metalnessMap}
           transparent
+          displacementMap={displacementMap}
+          displacementScale={0.25}
+          displacementBias={-0.085}
         />
     </mesh>
     );
