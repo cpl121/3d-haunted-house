@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import GuiProvider from './GuiProvider';
 import HauntedHouse from './HauntedHouse';
+import Ghosts from './Ghosts';
 
 const Scene = () => {
     return (
@@ -13,6 +14,7 @@ const Scene = () => {
           <directionalLight intensity={1.5} position={[3, 2, -8]} color={'#86cdff'} />
           
           <HauntedHouse />
+          <Ghosts />
   
           <OrbitControls enableDamping />
         </Canvas>
