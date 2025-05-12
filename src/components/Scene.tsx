@@ -4,8 +4,11 @@ import GuiProvider from './GuiProvider';
 import HauntedHouse from './HauntedHouse';
 import Ghosts from './Ghosts';
 import * as THREE from 'three'
+import { Sky } from '@react-three/drei'
 
 const Scene = () => {
+  const sunPosition: [number, number, number] = [0.3, -0.038, -0.95]
+
     return (
       <GuiProvider>
         <Canvas
@@ -21,7 +24,7 @@ const Scene = () => {
           }}
         >
           <ambientLight intensity={0.75} color={'#86cdff'}/>
-          <directionalLight castShadow intensity={1.5} position={[3, 2, -8]} color={'#86cdff'}  
+          <directionalLight castShadow intensity={1.5} position={sunPosition} color={'#86cdff'}  
             shadow-mapSize-width={256}
             shadow-mapSize-height={256}
             shadow-camera-right={8}
@@ -34,6 +37,14 @@ const Scene = () => {
           
           <HauntedHouse />
           <Ghosts />
+          <Sky
+            sunPosition={sunPosition}
+            distance={450000}
+            turbidity={10}
+            rayleigh={3}
+            mieCoefficient={0.1}
+            mieDirectionalG={0.95}
+          />
   
           <OrbitControls enableDamping />
         </Canvas>
