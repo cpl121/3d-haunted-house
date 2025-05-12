@@ -25,6 +25,7 @@ const Door = () => {
 
   return (
     <mesh position={[0, 1, 2 + 0.01]} ref={meshRef}>
+      <pointLight position={[0, 1.35, 0.5]} intensity={5} color={'#ffaf38'} />
       <planeGeometry args={[2.2, 2.2, 100, 100]} />
       <meshStandardMaterial 
           normalScale={[2, 2]}

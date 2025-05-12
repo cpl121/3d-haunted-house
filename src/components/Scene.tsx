@@ -9,8 +9,8 @@ const Scene = () => {
         <Canvas
           camera={{ position: [4, 2, 5], fov: 75 }}
         >
-          <ambientLight intensity={0.75} />
-          <directionalLight intensity={1.5} position={[3, 2, -8]} />
+          <ambientLight intensity={0.75} color={'#86cdff'}/>
+          <directionalLight intensity={1.5} position={[3, 2, -8]} color={'#86cdff'} />
           
           <HauntedHouse />
   
