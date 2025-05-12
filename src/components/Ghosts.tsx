@@ -37,9 +37,21 @@ const Ghosts= () => {
  
   return (
     <>
-      <pointLight ref={ghosts1_ref} intensity={6} color={'#8800ff'} />
-      <pointLight ref={ghosts2_ref} intensity={6} color={'#ff0088'} />
-      <pointLight ref={ghosts3_ref} intensity={6} color={'#ff0000'} />
+      <pointLight ref={ghosts1_ref} castShadow intensity={6} color={'#8800ff'} 
+        shadow-mapSize-width={256}
+        shadow-mapSize-height={256}
+        shadow-camera-far={10}
+      />
+      <pointLight ref={ghosts2_ref} castShadow intensity={6} color={'#ff0088'} 
+        shadow-mapSize-width={256}
+        shadow-mapSize-height={256}
+        shadow-camera-far={10}
+      />
+      <pointLight ref={ghosts3_ref} castShadow intensity={6} color={'#ff0000'} 
+        shadow-mapSize-width={256}
+        shadow-mapSize-height={256}
+        shadow-camera-far={10}
+      />
     </>
   )
 }

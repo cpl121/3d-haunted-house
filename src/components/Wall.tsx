@@ -18,7 +18,7 @@ const Wall = () => {
   map.colorSpace = THREE.SRGBColorSpace
 
   return (
-    <mesh position={[0, 1.25, 0]}>
+    <mesh position={[0, 1.25, 0]} castShadow receiveShadow>
       <boxGeometry args={[4, 2.5, 4]} />
       <meshStandardMaterial 
         map={map}

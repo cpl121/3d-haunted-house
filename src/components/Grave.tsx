@@ -24,7 +24,7 @@ const Grave = ({ position = [0, 0, 0], scale = [1, 1, 1], rotation = [0, 0, 0]  
   roughnessMap.repeat.set(0.3,0.4)
   
   return (
-      <mesh position={position} scale={scale} rotation={rotation}>
+      <mesh position={position} scale={scale} rotation={rotation} castShadow receiveShadow>
         <boxGeometry args={[0.6, 0.8, 0.2]} />
         <meshStandardMaterial 
           map={map}
