@@ -54,7 +54,7 @@ const Floor = () => {
   }, [gui])
 
   return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]}>
+    <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
       <planeGeometry args={[20, 20, 100, 100]} />
       <meshStandardMaterial 
         map={map}

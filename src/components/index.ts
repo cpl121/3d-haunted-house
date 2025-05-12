@@ -6,3 +6,4 @@ export { default as Bush } from './Bush';
 export { default as Wall } from './Wall';
 export { default as Door } from './Door';
 export { default as Roof } from './Roof';
+export { default as Ghosts } from './Ghosts';
