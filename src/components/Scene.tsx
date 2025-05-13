@@ -3,11 +3,10 @@ import { OrbitControls } from '@react-three/drei';
 import GuiProvider from './GuiProvider';
 import HauntedHouse from './HauntedHouse';
 import Ghosts from './Ghosts';
+import Moon from './Moon';
 import * as THREE from 'three'
-import { Sky } from '@react-three/drei'
 
 const Scene = () => {
-  const sunPosition: [number, number, number] = [0.3, -0.038, -0.95]
 
     return (
       <GuiProvider>
@@ -23,28 +22,13 @@ const Scene = () => {
             shadowMapType: THREE.PCFSoftShadowMap
           }}
         >
-          <ambientLight intensity={0.75} color={'#86cdff'}/>
-          <directionalLight castShadow intensity={1.5} position={sunPosition} color={'#86cdff'}  
-            shadow-mapSize-width={256}
-            shadow-mapSize-height={256}
-            shadow-camera-right={8}
-            shadow-camera-left={-8}
-            shadow-camera-top={8}
-            shadow-camera-bottom={-8} 
-            shadow-camera-near={1}
-            shadow-camera-far={20}
-          />
+          <color attach="background" args={['#0a0a0f']} />
+          <ambientLight intensity={0.2} color="#8899aa" />
           
+
+          <Moon />
           <HauntedHouse />
           <Ghosts />
-          <Sky
-            sunPosition={sunPosition}
-            distance={450000}
-            turbidity={10}
-            rayleigh={3}
-            mieCoefficient={0.1}
-            mieDirectionalG={0.95}
-          />
   
           <OrbitControls enableDamping />
         </Canvas>
