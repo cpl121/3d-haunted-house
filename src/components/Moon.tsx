@@ -3,8 +3,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three'
 
 const Moon = () => {
-  const moonPosition: [number, number, number] = [6, 10, -20]
-  // const moonPosition: [number, number, number] = [0, 10, 0]
+  const moonPosition: [number, number, number] = [6, 10, -15]
 
   const {
     map,
@@ -36,7 +35,7 @@ const Moon = () => {
       <directionalLight
           castShadow
           position={moonPosition}
-          intensity={0.6}
+          intensity={0.7}
           color="#aaccff"
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
@@ -49,7 +48,8 @@ const Moon = () => {
         <mesh ref={meshRef} position={moonPosition} rotation={[-0.75, 0, 0]}>
           <sphereGeometry args={[1, 64, 64]} />
           <meshStandardMaterial
-            emissive="#ddeeff" emissiveIntensity={0.0275}
+            emissive="#ddeeff" emissiveIntensity={0.05}
+            fog={false}
             transparent
             map={map}
             displacementMap={displacementMap}
@@ -58,7 +58,7 @@ const Moon = () => {
             aoMap={aoMap}
             roughnessMap={roughnessMap}
             normalMap={normalMap}
-            
+            side={THREE.DoubleSide}
             />
         </mesh>
       </>
