@@ -7,3 +7,4 @@ export { default as Wall } from './Wall';
 export { default as Door } from './Door';
 export { default as Roof } from './Roof';
 export { default as Ghosts } from './Ghosts';
+export { default as Moon } from './Moon';
