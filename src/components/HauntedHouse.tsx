@@ -1,12 +1,9 @@
 'use client';
 
-import { useFrame } from '@react-three/fiber';
-import { Timer } from 'three/addons/misc/Timer.js'
 import { Grave, Floor, Bush, Wall, Door, Roof, Window } from '@/components';
 import { GeometryProps } from '@/lib';
 
 const HauntedHouse = () => {
-  const timer = new Timer()
 
   const gravesMapped: GeometryProps[] = new Array(30).fill({}).map(() => {
     // Coordinates
@@ -25,12 +22,6 @@ const HauntedHouse = () => {
       rotation: [rotationX, rotationY, rotationZ],
     }
   })
-  
-  useFrame(({ }) => {
-
-    // Timer
-    timer.update()
-  });
 
   return (
     <>
