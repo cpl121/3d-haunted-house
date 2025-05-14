@@ -1,12 +1,13 @@
-import useGui from "@/hooks/useGui";
 import { useTexture } from "@react-three/drei";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as THREE from 'three'
 
 const Floor = () => {
-  const gui = useGui()
-  const [displacementScale, setDisplacementScale] = useState(0.25);
-  const [displacementBias, setDisplacementBias] = useState(-0.075);
+  // const gui = useGui()
+  // const [displacementScale, setDisplacementScale] = useState(0.25);
+  // const [displacementBias, setDisplacementBias] = useState(-0.075);
+  const [displacementScale] = useState(0.25);
+  const [displacementBias] = useState(-0.075);
 
   const {
       map,
@@ -38,19 +39,19 @@ const Floor = () => {
   aoMap.wrapS = aoMap.wrapT = THREE.RepeatWrapping
   roughnessMap.wrapS = roughnessMap.wrapT = THREE.RepeatWrapping
 
-    useEffect(() => {
-      if (!gui) return
-      const folder = gui.addFolder('Sphere')
+  //   useEffect(() => {
+  //     if (!gui) return
+  //     const folder = gui.addFolder('Sphere')
 
-      folder.add({ displacementScale }, 'displacementScale').min(0).max(1).step(0.001).name('floorDisplacementScale').onChange((value: number) => {
-        setDisplacementScale(value)
-      })
-      folder.add({ displacementBias }, 'displacementBias').min(-1).max(1).step(0.001).name('floorDisplacementBias').onChange((value: number) => {
-        setDisplacementBias(value)
-      })
-      folder.open()
+  //     folder.add({ displacementScale }, 'displacementScale').min(0).max(1).step(0.001).name('floorDisplacementScale').onChange((value: number) => {
+  //       setDisplacementScale(value)
+  //     })
+  //     folder.add({ displacementBias }, 'displacementBias').min(-1).max(1).step(0.001).name('floorDisplacementBias').onChange((value: number) => {
+  //       setDisplacementBias(value)
+  //     })
+  //     folder.open()
 
-  }, [gui])
+  // }, [gui])
 
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>

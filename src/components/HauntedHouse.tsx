@@ -4,11 +4,9 @@ import { useFrame } from '@react-three/fiber';
 import { Timer } from 'three/addons/misc/Timer.js'
 import { Grave, Floor, Bush, Wall, Door, Roof } from '@/components';
 import { GeometryProps } from '@/lib';
-// import useGui from '@/hooks/useGui';
 
 const HauntedHouse = () => {
   const timer = new Timer()
-  // const gui = useGui()
 
   const gravesMapped: GeometryProps[] = new Array(30).fill({}).map(() => {
     // Coordinates
@@ -28,17 +26,6 @@ const HauntedHouse = () => {
     }
   })
   
-  // useEffect(() => {
-  // if (!gui) return
-  // const folder = gui.addFolder('Sphere')
-
-  // folder.addColor(sphereValues, 'color').onChange((value: string) => {
-  //   sphereMaterialRef.current?.color.set(value)
-  // })
-  // folder.open()
-
-  // }, [gui])
-
   useFrame(({ }) => {
 
     // Timer
