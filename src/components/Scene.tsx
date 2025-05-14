@@ -23,7 +23,7 @@ const Scene = () => {
           }}
         >
           <color attach="background" args={['#0a0a0f']} />
-          <ambientLight intensity={0.2} color="#445566" />
+          <ambientLight intensity={0.75} color="#445566" />
           <fog attach="fog" args={['#101520', 6, 15]} />
 
           <Moon />
@@ -35,7 +35,7 @@ const Scene = () => {
             enablePan={false} 
             minPolarAngle={Math.PI / 4}
             maxPolarAngle={Math.PI / 2.05}  
-            minDistance={6.5}
+            minDistance={7}
             maxDistance={14}
           />
         </Canvas>
