@@ -1,11 +1,5 @@
 @import 'tailwindcss';
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-  }
-}
-
 html,
 body,
 #__next {
@@ -16,6 +10,5 @@ body,
 }
 
 body {
-  background: var(--background);
-  /* color: var(--foreground); */
+  background: #0a0a0f;
 }
