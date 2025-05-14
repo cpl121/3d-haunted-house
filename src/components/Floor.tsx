@@ -18,11 +18,10 @@ const Floor = () => {
     } = useTexture({ 
     alphaMap: './assets/floor/alpha.jpg',
     normalMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_NormalGL.jpg',
-    displacementMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Displacement.jpg',
-    map: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Color.jpg',
-
-    aoMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_AmbientOcclusion.jpg',
-    roughnessMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Roughness.jpg',
+    displacementMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Displacement.webp',
+    map: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Color.webp',
+    aoMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_AmbientOcclusion.webp',
+    roughnessMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Roughness.webp',
   });
 
   map.colorSpace = THREE.SRGBColorSpace

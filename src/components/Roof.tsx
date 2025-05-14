@@ -9,12 +9,11 @@ const Roof = () => {
     normalMap,
     alphaMap
   } = useTexture({
-    map: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_Color.jpg',
+    map: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_Color.webp',
     normalMap: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_NormalGL.jpg',
-
-    aoMap: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_AmbientOcclusion.jpg',
-    roughnessMap: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_Roughness.jpg',
-    alphaMap: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_Opacity.jpg'
+    aoMap: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_AmbientOcclusion.webp',
+    roughnessMap: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_Roughness.webp',
+    alphaMap: './assets/roof/RoofingTiles014D_1K-JPG/RoofingTiles014D_1K-JPG_Opacity.webp'
   });
 
   map.colorSpace = THREE.SRGBColorSpace
