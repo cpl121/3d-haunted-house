@@ -36,8 +36,8 @@ const Door = () => {
   roughnessMap.wrapS = roughnessMap.wrapT = THREE.RepeatWrapping
 
   return (
-    <mesh position={[0, 1, 2 + 0.01]} ref={meshRef}>
-       <group position={[0, 2.5, 0.1]}>
+    <mesh position={[0, 1.5, 2 + 0.01]} ref={meshRef}>
+       <group position={[0, 2, 0.1]}>
           <mesh position={[0, 0, -0.05]}>
             <boxGeometry args={[0.35, 0.4, 0.02]} />
             <meshStandardMaterial color="#333" metalness={0.7} roughness={0.4} />
@@ -70,21 +70,21 @@ const Door = () => {
             />
           </mesh>
         </group>
-      <pointLight position={[0, 2.45, 0.65]} intensity={10} color={'#ffaf38'} />
-      <planeGeometry args={[2.2, 3.7, 20, 20]} />
-      <meshStandardMaterial 
-          normalScale={[2, 2]}
-          map={map}
-          aoMap={aoMap}
-          roughnessMap={roughnessMap}
-          normalMap={normalMap}
-          metalnessMap={metalnessMap}
-          transparent
-          displacementMap={displacementMap}
-          displacementScale={0.25}
-          displacementBias={-0.085}
-        />
-    </mesh>
+        <pointLight position={[0, 2.45, 0.65]} intensity={10} color={'#ffaf38'} />
+        <planeGeometry args={[2.2, 3.2, 20, 20]} />
+        <meshStandardMaterial 
+            normalScale={[2, 2]}
+            map={map}
+            aoMap={aoMap}
+            roughnessMap={roughnessMap}
+            normalMap={normalMap}
+            metalnessMap={metalnessMap}
+            transparent
+            displacementMap={displacementMap}
+            displacementScale={0.25}
+            displacementBias={-0.085}
+          />
+      </mesh>
     );
   }
   
