@@ -42,10 +42,10 @@ const HauntedHouse = () => {
         )}
       </group>
       <group>
-        <Bush position={[1, 0.3, 2.2]} scale={[0.5, 0.5, 0.5]} />
-        <Bush position={[1.6, 0.2, 2.1]} scale={[0.25, 0.25, 0.25]} />
-        <Bush position={[-1, 0.2, 2.2]} scale={[0.4, 0.4, 0.4]} />
-        <Bush position={[-1.2, 0.1, 2.6]} scale={[0.15, 0.15, 0.15]} />
+        <Bush position={[1.2, 0.3, 2.2]} scale={[0.5, 0.5, 0.5]} />
+        <Bush position={[1.8, 0.2, 2.1]} scale={[0.25, 0.25, 0.25]} />
+        <Bush position={[-1.2, 0.2, 2.2]} scale={[0.4, 0.4, 0.4]} />
+        <Bush position={[-1.4, 0.1, 2.6]} scale={[0.15, 0.15, 0.15]} />
         <Door />
         <Roof />
         <Wall />
