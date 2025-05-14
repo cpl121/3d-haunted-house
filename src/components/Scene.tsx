@@ -11,7 +11,7 @@ const Scene = () => {
     return (
       <GuiProvider>
         <Canvas
-          camera={{ position: [4, 2, 5], fov: 75 }}
+          camera={{ position: [4, 2, 10], fov: 75 }}
           shadows
           gl={{
             outputColorSpace: THREE.SRGBColorSpace,
@@ -23,14 +23,21 @@ const Scene = () => {
           }}
         >
           <color attach="background" args={['#0a0a0f']} />
-          <ambientLight intensity={0.2} color="#8899aa" />
-          
+          <ambientLight intensity={0.2} color="#445566" />
+          <fog attach="fog" args={['#101520', 6, 15]} />
 
           <Moon />
           <HauntedHouse />
           <Ghosts />
   
-          <OrbitControls enableDamping />
+          <OrbitControls 
+            enableDamping 
+            enablePan={false} 
+            minPolarAngle={Math.PI / 4}
+            maxPolarAngle={Math.PI / 2.05}  
+            minDistance={6.5}
+            maxDistance={14}
+          />
         </Canvas>
       </GuiProvider>
     );
