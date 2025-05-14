@@ -31,15 +31,18 @@ A spooky 3D haunted house built with Next.js 15, Three.js, React Three Fiber, an
 ## 🛠️ Tech Stack
 
 **Frontend:**
+
 - [Next.js 15](https://nextjs.org/)
 - [React 18](https://react.dev/)
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
 - [Drei](https://github.com/pmndrs/drei)
 
 **3D & Graphics:**
+
 - [Three.js](https://threejs.org/)
 
 **Tooling:**
+
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
@@ -53,11 +56,15 @@ Clone the repository:
 git clone https://github.com/cpl121/haunted-house-3d.git
 cd haunted-house-3d
 ```
+
 # 2. Install dependencies
+
 ```bash
 npm install
 ```
+
 # 3. Run the dev server
+
 ```bash
 npm run dev
 ```

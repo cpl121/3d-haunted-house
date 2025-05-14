@@ -9,3 +9,5 @@ export { default as Roof } from './Roof';
 export { default as Ghosts } from './Ghosts';
 export { default as Moon } from './Moon';
 export { default as Window } from './Window';
+export { default as CanvasLoader } from './CanvasLoader';
+export { default as BackgroundMusic } from './BackgroundMusic';
