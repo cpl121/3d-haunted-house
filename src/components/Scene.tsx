@@ -5,6 +5,9 @@ import HauntedHouse from './HauntedHouse';
 import Ghosts from './Ghosts';
 import Moon from './Moon';
 import * as THREE from 'three'
+import { Suspense } from 'react';
+import CanvasLoader from './CanvasLoader';
+import BackgroundMusic from './BackgroundMusic';
 
 const Scene = () => {
 
@@ -25,11 +28,6 @@ const Scene = () => {
           <color attach="background" args={['#0a0a0f']} />
           <ambientLight intensity={0.75} color="#445566" />
           <fog attach="fog" args={['#101520', 6, 15]} />
-
-          <Moon />
-          <HauntedHouse />
-          <Ghosts />
-  
           <OrbitControls 
             enableDamping 
             enablePan={false} 
@@ -38,6 +36,13 @@ const Scene = () => {
             minDistance={7}
             maxDistance={14}
           />
+
+          <Suspense fallback={<CanvasLoader />} name={'Cell'}>
+            <Moon />
+            <HauntedHouse />
+            <Ghosts />
+            <BackgroundMusic />
+          </Suspense>
         </Canvas>
       </GuiProvider>
     );
