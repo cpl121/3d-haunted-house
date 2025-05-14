@@ -9,7 +9,7 @@ A spooky 3D haunted house built with Next.js 15, Three.js, React Three Fiber, an
 ## 🔗 Live Demo
 
 🌐 **Check it out here:**  
-[https://3d-haunted-house.vercel.app](https://3d-haunted-house.vercel.app)
+[https://3d-haunted-house-ten.vercel.app/](https://3d-haunted-house-ten.vercel.app/)
 
 ---
 
