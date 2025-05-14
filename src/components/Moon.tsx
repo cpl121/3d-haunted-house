@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three'
 
 const Moon = () => {
-  const moonPosition: [number, number, number] = [6, 10, -15]
+  const moonPosition: [number, number, number] = [6, 10, -10]
 
   const {
     map,
@@ -48,7 +48,7 @@ const Moon = () => {
         <mesh ref={meshRef} position={moonPosition} rotation={[-0.75, 0, 0]}>
           <sphereGeometry args={[1, 64, 64]} />
           <meshStandardMaterial
-            emissive="#ddeeff" emissiveIntensity={0.05}
+            emissive="#ddeeff" emissiveIntensity={0.035}
             fog={false}
             transparent
             map={map}
