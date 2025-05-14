@@ -1,9 +1,14 @@
 import { useTexture } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from 'three'
 
 const Door = () => {
   const meshRef = useRef<THREE.Mesh>(null);
+  const flickerLightRef = useRef<THREE.PointLight>(null)
+  const lightOn = useRef(true)
+  const nextSwitch = useRef(0)
+  const bulbMaterialRef = useRef<THREE.MeshStandardMaterial>(null)
 
   const {
     map,
@@ -35,6 +40,38 @@ const Door = () => {
   aoMap.wrapS = aoMap.wrapT = THREE.RepeatWrapping
   roughnessMap.wrapS = roughnessMap.wrapT = THREE.RepeatWrapping
 
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime()
+  
+    if (t > nextSwitch.current) {
+      if (lightOn.current) {
+        lightOn.current = false
+        nextSwitch.current = t + 0.15 + Math.random() * 0.05
+      } else {
+        lightOn.current = true
+        nextSwitch.current = t + 1.5 + Math.random() * 2
+      }
+    }
+  
+    if (flickerLightRef.current) {
+      flickerLightRef.current.intensity = lightOn.current ? 50 : 0
+    }
+  
+    if (bulbMaterialRef.current) {
+      const mat = bulbMaterialRef.current
+      if (lightOn.current) {
+        mat.emissiveIntensity = 6
+        mat.emissive.set('#ffaf38')
+        mat.color.set('#ffaf38')
+      } else {
+        mat.emissiveIntensity = 0.1
+        mat.emissive.set('#111111')
+        mat.color.set('#222222')
+      }
+    }
+  })
+  
+
   return (
     <mesh position={[0, 1.5, 2 + 0.01]} ref={meshRef}>
        <group position={[0, 2, 0.1]}>
@@ -63,6 +100,7 @@ const Door = () => {
           <mesh position={[0, -0.025, 0.375]}>
             <sphereGeometry args={[0.09, 32, 32]} />
             <meshStandardMaterial
+              ref={bulbMaterialRef}
               emissive="#ffaf38"
               emissiveIntensity={6}
               color="#ffaf38"
@@ -70,7 +108,7 @@ const Door = () => {
             />
           </mesh>
         </group>
-        <pointLight position={[0, 2.45, 0.65]} intensity={10} color={'#ffaf38'} />
+        <pointLight ref={flickerLightRef} position={[0, 2.45, 0.65]} intensity={50} color={'#ffaf38'} distance={5} decay={2} />
         <planeGeometry args={[2.2, 3.2, 20, 20]} />
         <meshStandardMaterial 
             normalScale={[2, 2]}
