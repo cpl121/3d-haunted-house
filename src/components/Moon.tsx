@@ -45,10 +45,10 @@ const Moon = () => {
           shadow-camera-top={10}
           shadow-camera-bottom={-10}
         />
-        <mesh ref={meshRef} position={moonPosition} rotation={[-0.75, 0, 0]}>
+        <mesh ref={meshRef} position={moonPosition} rotation={[-0.3, 0, 0]}>
           <sphereGeometry args={[1, 64, 64]} />
           <meshStandardMaterial
-            emissive="#ddeeff" emissiveIntensity={0.035}
+            emissive="#ddeeff" emissiveIntensity={0.04}
             fog={false}
             transparent
             map={map}
