@@ -12,11 +12,11 @@ const Moon = () => {
     normalMap,
     displacementMap
   } = useTexture({
-    map: './assets/moon/Moon_002_basecolor.png',
-    displacementMap: '/assets/moon/Moon_002_height.png',
-    aoMap: './assets/moon/Moon_002_ambientOcclusion.png',
+    map: './assets/moon/Moon_002_basecolor.webp',
+    displacementMap: '/assets/moon/Moon_002_height.webp',
+    aoMap: './assets/moon/Moon_002_ambientOcclusion.webp',
     normalMap: './assets/moon/Moon_002_normal.png',
-    roughnessMap: './assets/moon/Moon_002_roughness.png',
+    roughnessMap: './assets/moon/Moon_002_roughness.webp',
   });
 
   const meshRef = useRef<THREE.Mesh>(null)

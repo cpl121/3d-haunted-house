@@ -13,12 +13,12 @@ const Door = () => {
     metalnessMap,
     displacementMap,
   } = useTexture({
-    map: './assets/door/wooden_garage_door_1k/wooden_garage_door_diff_1k.jpg',
+    map: './assets/door/wooden_garage_door_1k/wooden_garage_door_diff_1k.webp',
     normalMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_nor_gl_1k.jpg',
-    aoMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.jpg',
-    metalnessMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.jpg',
-    roughnessMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.jpg',
-    displacementMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_disp_1k.jpg',
+    aoMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.webp',
+    metalnessMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.webp',
+    roughnessMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_arm_1k.webp',
+    displacementMap: './assets/door/wooden_garage_door_1k/wooden_garage_door_disp_1k.webp',
   });
 
   map.colorSpace = THREE.SRGBColorSpace

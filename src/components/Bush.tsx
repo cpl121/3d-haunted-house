@@ -10,11 +10,11 @@ const Bush= ({ position = [0, 0, 0], scale = [0, 0, 0] }: GeometryProps) => {
     metalnessMap,
     normalMap
   } = useTexture({
-    map: './assets/bush/forest_leaves_03_1k/forest_leaves_03_diff_1k.jpg',
+    map: './assets/bush/forest_leaves_03_1k/forest_leaves_03_diff_1k.webp',
     normalMap: './assets/bush/forest_leaves_03_1k/forest_leaves_03_nor_gl_1k.jpg',
-    aoMap: './assets/bush/forest_leaves_03_1k/forest_leaves_03_arm_1k.jpg',
-    roughnessMap: './assets/bush/forest_leaves_03_1k/forest_leaves_03_arm_1k.jpg',
-    metalnessMap: './assets/bush/forest_leaves_03_1k/forest_leaves_03_arm_1k.jpg',
+    aoMap: './assets/bush/forest_leaves_03_1k/forest_leaves_03_arm_1k.webp',
+    roughnessMap: './assets/bush/forest_leaves_03_1k/forest_leaves_03_arm_1k.webp',
+    metalnessMap: './assets/bush/forest_leaves_03_1k/forest_leaves_03_arm_1k.webp',
   });
 
   map.colorSpace = THREE.SRGBColorSpace

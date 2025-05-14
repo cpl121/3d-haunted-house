@@ -9,10 +9,10 @@ const Grave = ({ position = [0, 0, 0], scale = [1, 1, 1], rotation = [0, 0, 0]  
     roughnessMap,
     normalMap
   } = useTexture({
-    map: './assets/grave/Rock015_1K-JPG/Rock015_1K-JPG_Color.jpg',
+    map: './assets/grave/Rock015_1K-JPG/Rock015_1K-JPG_Color.webp',
     normalMap: './assets/grave/Rock015_1K-JPG/Rock015_1K-JPG_NormalGL.jpg',
-    aoMap: './assets/grave/Rock015_1K-JPG/Rock015_1K-JPG_AmbientOcclusion.jpg',
-    roughnessMap: './assets/grave/Rock015_1K-JPG/Rock015_1K-JPG_Roughness.jpg',
+    aoMap: './assets/grave/Rock015_1K-JPG/Rock015_1K-JPG_AmbientOcclusion.webp',
+    roughnessMap: './assets/grave/Rock015_1K-JPG/Rock015_1K-JPG_Roughness.webp',
   });
 
   map.colorSpace = THREE.SRGBColorSpace

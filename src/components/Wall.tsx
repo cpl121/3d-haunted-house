@@ -8,11 +8,10 @@ const Wall = () => {
     roughnessMap,
     normalMap
   } = useTexture({
-    map: './assets/wall/PaintedPlaster010_1K/PaintedPlaster010_1K-JPG_Color.jpg',
+    map: './assets/wall/PaintedPlaster010_1K/PaintedPlaster010_1K-JPG_Color.webp',
     normalMap: './assets/wall/PaintedPlaster010_1K/PaintedPlaster010_1K-JPG_NormalGL.jpg',
-
-    aoMap: './assets/wall/PaintedPlaster010_1K/PaintedPlaster010_1K-JPG_AmbientOcclusion.jpg',
-    roughnessMap: './assets/wall/PaintedPlaster010_1K/PaintedPlaster010_1K-JPG_Roughness.jpg',
+    aoMap: './assets/wall/PaintedPlaster010_1K/PaintedPlaster010_1K-JPG_AmbientOcclusion.webp',
+    roughnessMap: './assets/wall/PaintedPlaster010_1K/PaintedPlaster010_1K-JPG_Roughness.webp',
   });
 
   map.colorSpace = THREE.SRGBColorSpace
