@@ -8,3 +8,4 @@ export { default as Door } from './Door';
 export { default as Roof } from './Roof';
 export { default as Ghosts } from './Ghosts';
 export { default as Moon } from './Moon';
+export { default as Window } from './Window';

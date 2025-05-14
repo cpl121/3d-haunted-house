@@ -2,7 +2,7 @@
 
 import { useFrame } from '@react-three/fiber';
 import { Timer } from 'three/addons/misc/Timer.js'
-import { Grave, Floor, Bush, Wall, Door, Roof } from '@/components';
+import { Grave, Floor, Bush, Wall, Door, Roof, Window } from '@/components';
 import { GeometryProps } from '@/lib';
 
 const HauntedHouse = () => {
@@ -49,6 +49,7 @@ const HauntedHouse = () => {
         <Door />
         <Roof />
         <Wall />
+        <Window />
       </group>
     </>
   );
