@@ -1,6 +1,6 @@
-import { useTexture } from "@react-three/drei";
-import { useState } from "react";
-import * as THREE from 'three'
+import { useTexture } from '@react-three/drei';
+import { useState } from 'react';
+import * as THREE from 'three';
 
 const Floor = () => {
   // const gui = useGui()
@@ -9,14 +9,7 @@ const Floor = () => {
   const [displacementScale] = useState(0.25);
   const [displacementBias] = useState(-0.075);
 
-  const {
-      map,
-      alphaMap,
-      aoMap,
-      roughnessMap,
-      normalMap,
-      displacementMap
-    } = useTexture({ 
+  const { map, alphaMap, aoMap, roughnessMap, normalMap, displacementMap } = useTexture({
     alphaMap: './assets/floor/alpha.jpg',
     normalMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_NormalGL.jpg',
     displacementMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Displacement.webp',
@@ -25,19 +18,19 @@ const Floor = () => {
     roughnessMap: './assets/floor/Tiles088_1K-JPG/Tiles088_1K-JPG_Roughness.webp',
   });
 
-  map.colorSpace = THREE.SRGBColorSpace
+  map.colorSpace = THREE.SRGBColorSpace;
 
-  map.repeat.set(8,8)
-  normalMap.repeat.set(8,8)
-  displacementMap.repeat.set(8,8)
-  aoMap.repeat.set(8,8)
-  roughnessMap.repeat.set(8,8)
+  map.repeat.set(8, 8);
+  normalMap.repeat.set(8, 8);
+  displacementMap.repeat.set(8, 8);
+  aoMap.repeat.set(8, 8);
+  roughnessMap.repeat.set(8, 8);
 
-  map.wrapS = map.wrapT = THREE.RepeatWrapping
-  normalMap.wrapS = normalMap.wrapT = THREE.RepeatWrapping
-  displacementMap.wrapS = displacementMap.wrapT = THREE.RepeatWrapping
-  aoMap.wrapS = aoMap.wrapT = THREE.RepeatWrapping
-  roughnessMap.wrapS = roughnessMap.wrapT = THREE.RepeatWrapping
+  map.wrapS = map.wrapT = THREE.RepeatWrapping;
+  normalMap.wrapS = normalMap.wrapT = THREE.RepeatWrapping;
+  displacementMap.wrapS = displacementMap.wrapT = THREE.RepeatWrapping;
+  aoMap.wrapS = aoMap.wrapT = THREE.RepeatWrapping;
+  roughnessMap.wrapS = roughnessMap.wrapT = THREE.RepeatWrapping;
 
   //   useEffect(() => {
   //     if (!gui) return
@@ -56,7 +49,7 @@ const Floor = () => {
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
       <planeGeometry args={[20, 20, 100, 100]} />
-      <meshStandardMaterial 
+      <meshStandardMaterial
         map={map}
         alphaMap={alphaMap}
         transparent
@@ -67,10 +60,9 @@ const Floor = () => {
         displacementMap={displacementMap}
         displacementScale={displacementScale}
         displacementBias={displacementBias}
-        />
+      />
     </mesh>
-    );
-  }
-  
-  export default Floor;
-  
+  );
+};
+
+export default Floor;

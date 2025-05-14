@@ -16,12 +16,8 @@ const Window = () => {
 
         {[-0.25, 0.25].map((x, i) => (
           <mesh key={i} position={[x, 0, 0.08]}>
-            <planeGeometry args={[0.85, 1.]} />
-            <meshStandardMaterial
-              color="#3d2c1e"
-              roughness={0.85}
-              metalness={0.1}
-            />
+            <planeGeometry args={[0.85, 1]} />
+            <meshStandardMaterial color="#3d2c1e" roughness={0.85} metalness={0.1} />
           </mesh>
         ))}
       </group>
