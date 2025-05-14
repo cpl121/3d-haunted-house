@@ -31,7 +31,7 @@ const Roof = () => {
   alphaMap.wrapS = THREE.RepeatWrapping
 
   return (
-      <mesh position={[0, 3.2501, 0]} rotation={[0, Math.PI / 4, 0]} castShadow>
+      <mesh position={[0, 4.7501, 0]} rotation={[0, Math.PI / 4, 0]} castShadow>
         <coneGeometry args={[3.5, 1.5, 4]} />
         <meshStandardMaterial 
           transparent
